@@ -1,4 +1,4 @@
-import type { NextPage } from "next";
+import type { GetStaticProps } from "next";
 import Head from "next/head";
 import Link from "next/link";
 import About from "../components/About";
@@ -10,14 +10,28 @@ import Skills from "../components/Skills";
 import WorkExperience from "../components/WorkExperience";
 import { profile } from "../assets/sagar-profile1.jpg";
 import Image from "next/image";
+import { Experience, PageInfo, Project, Skill, Social } from "../typings";
+import { fetchPageInfo } from "../utils/fetchPageInfo";
+import { fetchExperiences } from "../utils/fetchExperiences";
+import { fetchSkills } from "../utils/fetchSkills";
+import { fetchProjects } from "../utils/fetchProjects";
+import { fetchSocials } from "../utils/fetchSocials";
 
-const Home: NextPage = () => {
+type Props = {
+	pageInfo: PageInfo;
+	experiences: Experience[];
+	skills: Skill[];
+	projects: Project[];
+	socials: Social[];
+};
+
+const Home = ({ pageInfo, experiences, skills, projects, socials }: Props) => {
 	return (
 		<div className='bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80'>
 			<Head>
 				<title>Sagar's Portfolio</title>
 			</Head>
-			<Header />
+			<Header socials={socials} />
 
 			{/* Hero */}
 			<section id='hero' className='snap-start'>
@@ -61,3 +75,26 @@ const Home: NextPage = () => {
 };
 
 export default Home;
+
+export const getStaticProps: GetStaticProps<Props> = async () => {
+	const pageInfo: PageInfo = await fetchPageInfo();
+	const experiences: Experience[] = await fetchExperiences();
+	const skills: Skill[] = await fetchSkills();
+	const projects: Project[] = await fetchProjects();
+	const socials: Social[] = await fetchSocials();
+
+	return {
+		props: {
+			pageInfo,
+			experiences,
+			skills,
+			projects,
+			socials,
+		},
+
+		// Next.js will attempt to regenerate the page:
+		// when a request comes in
+		// at most once every 10 seconds
+		revalidate: 10,
+	};
+};
