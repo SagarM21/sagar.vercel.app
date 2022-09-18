@@ -45,6 +45,11 @@ export default {
 			type: "string",
 		},
 		{
+			name: "backgroundInformation",
+			title: "BackgroundInformation",
+			type: "string",
+		},
+		{
 			name: "socials",
 			title: "Socials",
 			type: "array",
