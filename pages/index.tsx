@@ -32,7 +32,7 @@ const Home = ({ pageInfo, experiences, skills, projects, socials }: Props) => {
 			<Header socials={socials} />
 
 			{/* Hero */}
-			<section id='hero' className='snap-start'>
+			<section id='hero' className='snap-center'>
 				<Hero pageInfo={pageInfo} />
 			</section>
 
@@ -57,17 +57,17 @@ const Home = ({ pageInfo, experiences, skills, projects, socials }: Props) => {
 				<ContactMe pageInfo={pageInfo} />
 			</section>
 
-			<Link href='#hero'>
-				<footer className='sticky bottom-2 w-full cursor-pointer'>
-					<div className='flex items-center justify-center'>
+			<footer className='sticky bottom-2  cursor-pointer'>
+				<div className='flex items-center justify-center'>
+					<Link href='#hero'>
 						<img
 							className='h-10 w-10 rounded-full filter grayscale hover:grayscale-0 cursor-pointer'
 							src='https://cdn.sanity.io/images/zod44fgn/production/6b87774b51f684556a568e735af90a486cb2d862-3024x3604.jpg'
 							alt=''
 						/>
-					</div>
-				</footer>
-			</Link>
+					</Link>
+				</div>
+			</footer>
 		</div>
 	);
 };
