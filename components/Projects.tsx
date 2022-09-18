@@ -43,7 +43,7 @@ const Projects = ({ projects }: Props) => {
 								{project?.technologies.map((technology) => (
 									<img
 										src={urlFor(technology.image).url()}
-										className='h-10 w-10'
+										className='h-10 w-10 rounded-full'
 										key={technology._id}
 										alt=''
 									/>

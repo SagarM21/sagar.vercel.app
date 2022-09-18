@@ -54,7 +54,7 @@ const Home = ({ pageInfo, experiences, skills, projects, socials }: Props) => {
 			</section>
 
 			<section id='contact' className='snap-start'>
-				<ContactMe />
+				<ContactMe pageInfo={pageInfo} />
 			</section>
 
 			<Link href='#hero'>
@@ -62,7 +62,7 @@ const Home = ({ pageInfo, experiences, skills, projects, socials }: Props) => {
 					<div className='flex items-center justify-center'>
 						<img
 							className='h-10 w-10 rounded-full filter grayscale hover:grayscale-0 cursor-pointer'
-							src=''
+							src='https://cdn.sanity.io/images/zod44fgn/production/6b87774b51f684556a568e735af90a486cb2d862-3024x3604.jpg'
 							alt=''
 						/>
 					</div>
