@@ -25,7 +25,7 @@ type Props = {
 
 const Home = ({ pageInfo, experiences, skills, projects, socials }: Props) => {
 	return (
-		<div className='bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80 scroll-smooth'>
+		<div className='bg-[#141414] text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80 scroll-smooth'>
 			<Head>
 				<title>{pageInfo?.name} - Developer</title>
 			</Head>
@@ -37,9 +37,9 @@ const Home = ({ pageInfo, experiences, skills, projects, socials }: Props) => {
 			</section>
 
 			{/* About */}
-			<section id='about' className='snap-center'>
+			{/* <section id='about' className='snap-center'>
 				<About pageInfo={pageInfo} />
-			</section>
+			</section> */}
 
 			<section id='experience' className='snap-center'>
 				<WorkExperience experiences={experiences} />
@@ -53,9 +53,9 @@ const Home = ({ pageInfo, experiences, skills, projects, socials }: Props) => {
 				<Projects projects={projects} />
 			</section>
 
-			<section id='contact' className='snap-start'>
+			{/* <section id='contact' className='snap-start'>
 				<ContactMe pageInfo={pageInfo} />
-			</section>
+			</section> */}
 
 			<footer className='sticky bottom-2  cursor-pointer'>
 				<div className='flex items-center justify-center'>
