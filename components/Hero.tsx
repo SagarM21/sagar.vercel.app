@@ -32,7 +32,7 @@ function Hero({ pageInfo }: Props) {
 					<Cursor cursorColor='#F7AB0A' />
 				</h1>
 
-				<div>
+				<div className="mt-4 space-x-1">
 					{/* <Link href='#about'>
 						<button className='heroButton'>About</button>
 					</Link> */}
