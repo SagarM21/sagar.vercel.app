@@ -28,8 +28,9 @@ function Header({ socials }: Props) {
 						key={social._id}
 						url={social.url}
 						target='_blank'
-						fgColor='grey'
+						fgColor='white'
 						bgColor='transparent'
+						
 					/>
 				))}
 			</motion.div>
@@ -48,10 +49,10 @@ function Header({ socials }: Props) {
 					<SocialIcon
 						className='cursor-pointer'
 						network='email'
-						fgColor='grey'
+						fgColor='white'
 						bgColor='transparent'
 					/>
-					<p className='uppercase hidden md:inline-flex text-sm text-gray-400'>
+					<p className='uppercase hidden md:inline-flex text-sm white'>
 						Get In Touch
 					</p>
 				</motion.div>

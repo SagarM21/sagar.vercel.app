@@ -30,14 +30,12 @@ const Projects = ({ projects }: Props) => {
 							transition={{ duration: 1.2 }}
 							whileInView={{ opacity: 1, y: 0 }}
 							viewport={{ once: true }}
-							// src={urlFor(project?.image).url()}
+							src={urlFor(project?.image).url()}
+							className='w-32 h-32 md:w-60 md:h-56 xl:w-80 xl:h-80 rounded-md'
 							alt=''
 						/>
 						<div className='space-y-10 px-0 md:px-10 max-w-6xl'>
 							<h4 className='text-4xl text-center font-semibold'>
-								<span className='underline decoration-[#F7AB0A]/50'>
-									Project {i + 1} of {projects.length}:
-								</span>{" "}
 								{project?.title}
 							</h4>
 
