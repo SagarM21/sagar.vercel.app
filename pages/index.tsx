@@ -90,6 +90,8 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
 			socials,
 		},
 
+		fallback: false,
+
 		// Next.js will attempt to regenerate the page:
 		// when a request comes in
 		// at most once every 10 seconds
