@@ -30,7 +30,6 @@ function Header({ socials }: Props) {
 						target='_blank'
 						fgColor='white'
 						bgColor='transparent'
-						
 					/>
 				))}
 			</motion.div>

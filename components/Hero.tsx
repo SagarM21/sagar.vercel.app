@@ -32,7 +32,7 @@ function Hero({ pageInfo }: Props) {
 					<Cursor cursorColor='#F7AB0A' />
 				</h1>
 
-				<div className="mt-4 space-x-1">
+				<div className='mt-4 space-x-1'>
 					{/* <Link href='#about'>
 						<button className='heroButton'>About</button>
 					</Link> */}
@@ -45,6 +45,9 @@ function Hero({ pageInfo }: Props) {
 					<Link href='#projects'>
 						<button className='heroButton'>Projects</button>
 					</Link>
+					<a href='/cv.pdf' target='_blank' rel='noreferrer'>
+						<button className='heroButton'>Resume</button>
+					</a>
 				</div>
 			</div>
 		</div>
