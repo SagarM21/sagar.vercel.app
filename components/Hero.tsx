@@ -49,7 +49,7 @@ function Hero({ pageInfo }: Props) {
 						<button className='heroButton'>Resume</button>
 					</a>
 				</div>
-			</div>
+			</div> 
 		</div>
 	);
 }
